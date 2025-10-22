@@ -44,7 +44,7 @@ function drawInteraction(faces, hands) {
         //  line(face.leftEye.x, face.leftEye.y, palmX, palmY);
        //  line(face.rightEye.x, face.rightEye.y, palmX, palmY);
         
-        ellipse(indTip.x, indTip.y, 40);
+       // ellipse(indTip.x, indTip.y, 40);
        }
     
 
