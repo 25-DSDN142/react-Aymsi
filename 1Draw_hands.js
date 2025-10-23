@@ -41,24 +41,27 @@ function drawInteraction(faces, hands) {
     */
 
     //thumb
-    fill(255);
-    ellipse(thumbTipX, thumbTipY, 30, 30);
+    // fill(255);
+    // ellipse(thumbTipX, thumbTipY, 30, 30);
 
     //index finger
-    fill(255);
-    ellipse(indexFingerTipX, indexFingerTipY, 30, 30);
+    // fill(255);
+    // ellipse(indexFingerTipX, indexFingerTipY, 30, 30);
 
     //middle finger
-    fill(255);
-    ellipse(middleFingerTipX, middleFingerTipY, 30, 30);
+    // fill(255);
+    // ellipse(middleFingerTipX, middleFingerTipY, 30, 30);
 
     //ring finger
-    fill(255);
-    ellipse(ringFingerTipX, ringFingerTipY, 30, 30);
+    // fill(255);
+    // ellipse(ringFingerTipX, ringFingerTipY, 30, 30);
 
     //pinky finger
-    fill(255);
-    ellipse(pinkyFingerTipX, pinkyFingerTipY, 30, 30);
+    // fill(255);
+    // ellipse(pinkyFingerTipX, pinkyFingerTipY, 30, 30);
+
+    //thumb starShape
+    starShape(thumbTipX, thumbTipY);
 
     //drawPoints(hand);
 
@@ -74,7 +77,23 @@ function drawInteraction(faces, hands) {
   //------------------------------------------------------
 }
 
+function starShape(x, y) {
+  fill(255);
+  stroke(0);
+  strokeWeight(2);
 
+  beginShape();
+  vertex(x, y + 10);
+  vertex(x + 5, y + 5);
+  vertex(x + 10, y);
+  vertex(x + 5, y - 5);
+  vertex(x, y - 10);
+  vertex(x - 5, y - 5);
+  vertex(x - 10, y);
+  vertex(x - 5, y + 5);
+  
+  endShape(CLOSE);
+}
 
 
 
