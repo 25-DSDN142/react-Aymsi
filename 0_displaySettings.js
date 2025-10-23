@@ -1,3 +1,6 @@
+//My final code is in 1Draw_Hands.js
+// I will leave display settings on webcam - please have a play and have fun with the filter! :D
+// 
 //keyboard shortcuts 
 // ! = save screenshot
 // h = show UI
