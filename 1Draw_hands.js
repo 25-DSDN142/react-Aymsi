@@ -47,6 +47,20 @@ function drawInteraction(faces, hands) {
     //////////////////////////////////////////
    // Start drawing on the hands here
   ///////////////////////////////////////////
+  
+  //adding gesture recognition for additional stars
+      let whatGesture = detectHandGesture(hand)
+
+    if (whatGesture == "Thumbs Up") {
+      var1StarShape(thumbTipX + 30, thumbTipY + 20);
+      var2StarShape(thumbTipX - 30, thumbTipY + 30);
+    }
+    if (whatGesture == "Peace") {
+      var1StarShape(indexFingerTipX + 30, indexFingerTipY + 20);
+      var2StarShape(indexFingerTipX - 30, indexFingerTipY + 30);
+      var1StarShape(middleFingerTipX + 30, middleFingerTipY + 20);
+      var2StarShape(middleFingerTipX - 30, middleFingerTipY + 30);
+    }
 
    /////////////////////////////////////////////////
 
