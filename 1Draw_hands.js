@@ -55,9 +55,10 @@ function drawInteraction(faces, hands) {
     //pinky finger starShape
     starShape(pinkyFingerTipX, pinkyFingerTipY);
 
-    //drawPoints(hand);
+    //would be heart - but testing first with ellipse: first method chameleon hand puppet
+    heartHandPuppet(hand);
 
-    //chameleonHandPuppet(hand)
+     //drawPoints(hand);
 
     /*
     Stop drawing on the hands here
@@ -89,6 +90,26 @@ function pinchCircle(hand) { // adapted from https://editor.p5js.org/ml5/sketche
   // Find the index finger tip and thumb tip
   let finger = hand.index_finger_tip;
   //let finger = hand.pinky_finger_tip;
+  let thumb = hand.thumb_tip;
+
+  // Draw circles at finger positions
+  let centerX = (finger.x + thumb.x) / 2;
+  let centerY = (finger.y + thumb.y) / 2;
+  // Calculate the pinch "distance" between finger and thumb
+  let pinch = dist(finger.x, finger.y, thumb.x, thumb.y);
+
+  // This circle's size is controlled by a "pinch" gesture
+  fill(0, 255, 0, 200);
+  stroke(0);
+  strokeWeight(2);
+  circle(centerX, centerY, pinch);
+
+}
+
+function heartHandPuppet(hand) {
+  //pinky finger and thumb tip?
+
+  let finger = hand.pinky_finger_tip; // this finger now contains the x and y infomation! you can access it by using finger.x 
   let thumb = hand.thumb_tip;
 
   // Draw circles at finger positions
