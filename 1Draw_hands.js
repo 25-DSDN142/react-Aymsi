@@ -70,11 +70,9 @@ function drawInteraction(faces, hands) {
     imageMode(CORNER);
     //thumb starShape
     starShape(thumbTipX, thumbTipY);
-    scale(0.5);
     starShape(thumbTipX + 30, thumbTipY + 20);
     starShape(thumbTipX - 30, thumbTipY + 30);
 
-    scale(1);
     //index finger starShape
     starShape(indexFingerTipX, indexFingerTipY);
     // starShape(indexFingerTipX+ 30, indexFingerTipY + 20);
