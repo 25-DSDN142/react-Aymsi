@@ -40,19 +40,19 @@ function drawInteraction(faces, hands) {
     let pinkyFingerTipX = hand.pinky_finger_tip.x;
     let pinkyFingerTipY = hand.pinky_finger_tip.y;
 
-    //variables for middle of hand ellipse
-    let middleOfHandX = (middleFingerTipX + wristX) / 2; //finding middle between wrist and middle finger tip
-
-    let middleOfHandY = (middleFinngerTipY + wristY) / 2;
-
-    let sizeOfEllipse = dist(middleFingerTipX, middleFingerTipY, wristX, wristY);
-
     /*
     Start drawing on the hands here
     */
 
     fill(255, 173, 211, 150);
     stroke(255);
+       //variables for middle of hand ellipse
+    let middleOfHandX = (middleFingerTipX + wristX) / 2; //finding middle between wrist and middle finger tip
+
+    let middleOfHandY = (middleFingerTipY + wristY) / 2;
+
+    let sizeOfEllipse = dist(middleFingerTipX, middleFingerTipY, wristX, wristY);
+
     ellipse(middleOfHandX, middleOfHandY, sizeOfEllipse, sizeOfEllipse);
 
     //thumb starShape
