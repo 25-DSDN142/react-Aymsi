@@ -40,14 +40,21 @@ function drawInteraction(faces, hands) {
     let pinkyFingerTipX = hand.pinky_finger_tip.x;
     let pinkyFingerTipY = hand.pinky_finger_tip.y;
 
+    //variables for middle of hand ellipse
+    let middleOfHandX = (middleFingerTipX + wristX) / 2; //finding middle between wrist and middle finger tip
+
+    let middleOfHandY = (middleFinngerTipY + wristY) / 2;
+
     let sizeOfEllipse = dist(middleFingerTipX, middleFingerTipY, wristX, wristY);
 
     /*
     Start drawing on the hands here
     */
 
-    ellipse(sizeOfEllipse, sizeOfEllipse, sizeOfEllipse, sizeOfEllipse);
-    
+    fill(255, 173, 211, 150);
+    stroke(255);
+    ellipse(middleOfHandX, middleOfHandY, sizeOfEllipse, sizeOfEllipse);
+
     //thumb starShape
     starShape(thumbTipX, thumbTipY);
 
@@ -64,7 +71,7 @@ function drawInteraction(faces, hands) {
     starShape(pinkyFingerTipX, pinkyFingerTipY);
 
     //would be heart - but testing first with ellipse: first method chameleon hand puppet
-    heartHandPuppet(hand);
+    //heartHandPuppet(hand);
 
      //drawPoints(hand);
 
