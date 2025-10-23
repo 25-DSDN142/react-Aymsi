@@ -142,6 +142,19 @@ function drawInteraction(face, hands) {
     let rightEyeWidth = face.rightEye.width;
     let rightEyeHeight = face.rightEye.height;
 
+    //hands variables needed repeated to make below work:
+    //middle finger
+    let middleFingerTipX = hand.middle_finger_tip.x;
+    let middleFingerTipY = hand.middle_finger_tip.y;
+
+    //wrist (for centring ellipse/heart image)
+    let wristX = hand.wrist.x;
+    let wristY = hand.wrist.y;
+
+    //variables for middle of eyes heartImage when mouth is opened - also scaling with hands open/close!
+
+    let sizeOfImage = dist(middleFingerTipX, middleFingerTipY, wristX, wristY) / 1.5;
+    
     ////////////////////////////////////////////////
 //mouth open = heart image interaction!
   checkIfMouthOpen(face);
