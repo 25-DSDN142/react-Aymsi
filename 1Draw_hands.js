@@ -1,13 +1,13 @@
 // ----=  HANDS  =----
 /* load images here */
-
 let heartImage;
 function prepareInteraction() {
   //bgImage = loadImage('/images/background.png');
   heartImage = loadImage('/images/heart.png');
 }
 
-function drawInteraction(faces, hands) {
+let isMouthOpen = false;
+function drawInteraction(face, hands) {
   // hands part
   // for loop to capture if there is more than one hand on the screen. This applies the same process to all hands.
   for (let i = 0; i < hands.length; i++) {
@@ -50,6 +50,19 @@ function drawInteraction(faces, hands) {
     let middleOfHandY = (middleFingerTipY + wristY) / 2;
 
     let sizeOfImage = dist(middleFingerTipX, middleFingerTipY, wristX, wristY) / 1.5;
+
+  //////////// face variables //////////////
+      // Left eye
+    let leftEyeCenterX = face.leftEye.centerX;
+    let leftEyeCenterY = face.leftEye.centerY;
+    let leftEyeWidth = face.leftEye.width;
+    let leftEyeHeight = face.leftEye.height;
+
+        // Right eye
+    let rightEyeCenterX = face.rightEye.centerX;
+    let rightEyeCenterY = face.rightEye.centerY;
+    let rightEyeWidth = face.rightEye.width;
+    let rightEyeHeight = face.rightEye.height;
 
     //////////////////////////////////////////
    // Start drawing on the hands here
@@ -122,10 +135,33 @@ function drawInteraction(faces, hands) {
     Stop drawing on the hands here
     */
   }
-  // You can make addtional elements here, but keep the hand drawing inside the for loop. 
-  //------------------------------------------------------
+////////// end of hand drawing for loop ///////////
+///////////////// face movement! //////////////////
+
+  checkIfMouthOpen(face);
+  if (isMouthOpen == true) {
+    imageMode(CENTER);
+    image(heartImage, leftEyeCenterX, leftEyeCenterY, leftEyeWidth, leftEyeHeight);
+    image(heartImage, rightEyeCenterX, rightEyeCenterY, rightEyeWidth, rightEyeHeight);
+  }
+  imageMode(CORNER);
 }
 
+function checkIfMouthOpen(face) {
+
+  let upperLip = face.keypoints[13]
+  let lowerLip = face.keypoints[14]
+  // ellipse(lowerLip.x,lowerLip.y,20)
+  // ellipse(upperLip.x,upperLip.y,20)
+
+  let d = dist(upperLip.x, upperLip.y, lowerLip.x, lowerLip.y);
+  //console.log(d)
+  if (d < 10) {
+    isMouthOpen = false;
+  } else {
+    isMouthOpen = true;
+  }
+}
 function starShape(x, y) {
   fill(255, 219, 99, 150);
   stroke(255, 238, 181);
