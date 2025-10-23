@@ -119,7 +119,7 @@ function heartHandPuppet(hand) {
   let pinch = dist(finger.x, finger.y, thumb.x, thumb.y);
 
   // This circle's size is controlled by a "pinch" gesture
-  fill(0, 255, 0, 200);
+  fill(255, 173, 211, 150);
   stroke(0);
   strokeWeight(2);
   circle(centerX, centerY, pinch);
