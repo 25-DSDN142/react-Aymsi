@@ -106,7 +106,7 @@ function drawInteraction(faces, hands) {
 }
 
 function starShape(x, y) {
-  fill(255, 219, 99);
+  fill(255, 219, 99, 150);
   stroke(255, 238, 181);
   strokeWeight(5);
 
@@ -124,9 +124,9 @@ function starShape(x, y) {
 }
 
 function var1StarShape(x, y) {
-  fill(241, 153, 193);
+  fill(241, 153, 193, 150);
   stroke(250, 211, 228);
-  strokeWeight(5);
+  strokeWeight(2.5);
 
   beginShape();
   vertex(x, y + 15);
@@ -142,9 +142,9 @@ function var1StarShape(x, y) {
 }
 
 function var2StarShape(x, y) {
-  fill(128, 232, 255);
+  fill(128, 232, 255, 150);
   stroke(186, 242, 255);
-  strokeWeight(5);
+  strokeWeight(3.5);
 
   beginShape();
   vertex(x, y + 20);
