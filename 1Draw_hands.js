@@ -51,19 +51,6 @@ function drawInteraction(face, hands) {
 
     let sizeOfImage = dist(middleFingerTipX, middleFingerTipY, wristX, wristY) / 1.5;
 
-  //////////// face variables //////////////
-      // Left eye
-    let leftEyeCenterX = face.leftEye.centerX;
-    let leftEyeCenterY = face.leftEye.centerY;
-    let leftEyeWidth = face.leftEye.width;
-    let leftEyeHeight = face.leftEye.height;
-
-        // Right eye
-    let rightEyeCenterX = face.rightEye.centerX;
-    let rightEyeCenterY = face.rightEye.centerY;
-    let rightEyeWidth = face.rightEye.width;
-    let rightEyeHeight = face.rightEye.height;
-
     //////////////////////////////////////////
    // Start drawing on the hands here
   ///////////////////////////////////////////
@@ -130,21 +117,41 @@ function drawInteraction(face, hands) {
     //heartHandPuppet(hand);
 
      //drawPoints(hand);
-
-    /*
-    Stop drawing on the hands here
-    */
   }
 ////////// end of hand drawing for loop ///////////
 ///////////////// face movement! //////////////////
 
+  // for loop to capture if there is more than one face on the screen. This applies the same process to all faces. 
+  for (let i = 0; i < faces.length; i++) {
+    let face = faces[i]; // face holds all the keypoints of the face\
+    console.log(face);
+    if (showKeypoints) {
+      drawPoints(face)
+    }
+
+      //////////// face variables //////////////
+      // Left eye
+    let leftEyeCenterX = face.leftEye.centerX;
+    let leftEyeCenterY = face.leftEye.centerY;
+    let leftEyeWidth = face.leftEye.width;
+    let leftEyeHeight = face.leftEye.height;
+
+        // Right eye
+    let rightEyeCenterX = face.rightEye.centerX;
+    let rightEyeCenterY = face.rightEye.centerY;
+    let rightEyeWidth = face.rightEye.width;
+    let rightEyeHeight = face.rightEye.height;
+
+    ////////////////////////////////////////////////
+//mouth open = heart image interaction!
   checkIfMouthOpen(face);
   if (isMouthOpen == true) {
     imageMode(CENTER);
-    image(heartImage, leftEyeCenterX, leftEyeCenterY, leftEyeWidth, leftEyeHeight);
-    image(heartImage, rightEyeCenterX, rightEyeCenterY, rightEyeWidth, rightEyeHeight);
+    image(heartImage, leftEyeCenterX, leftEyeCenterY, leftEyeWidth * 2, leftEyeHeight * 2);
+    image(heartImage, rightEyeCenterX, rightEyeCenterY, rightEyeWidth * 2, rightEyeHeight * 2);
   }
   imageMode(CORNER);
+}
 }
 
 function checkIfMouthOpen(face) {
