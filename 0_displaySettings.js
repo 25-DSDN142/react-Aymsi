@@ -25,22 +25,22 @@
  //const  CaptureWidth = 1280;
  //const  CaptureHeight = 720;
 
-const  CaptureWidth = 640;
-const  CaptureHeight = 360;
+// const  CaptureWidth = 640;
+// const  CaptureHeight = 360;
 
 
 // If using Webcam use these dimentions
-//const  CaptureWidth = 1280;
-//const  CaptureHeight = 960;
+// const  CaptureWidth = 1280;
+// const  CaptureHeight = 960;
 
-// const  CaptureWidth = 1024;
-// const  CaptureHeight = 768;
+const  CaptureWidth = 1024;
+const  CaptureHeight = 768;
 
 
 
 // program Mode
 // const webCam = false; // set to false to use video
-const webCam = false; // set to false to use video
+const webCam = true; // set to false to use video
 const videoFile = "hands1.mov" // update this to match the video file you want to load
 const flipVideo = true; // changes from mirror mode to standard video mode
 
@@ -57,7 +57,7 @@ const numberOfFaces = 1;
 const numberOfHands = 2; 
 
 
-const threshold = 0.01 // only change if you're having hand detection issues
+const threshold = 0.9 // only change if you're having hand detection issues
 
 const performanceMode = 'high'; // 'low', 'balanced', 'high'
 
