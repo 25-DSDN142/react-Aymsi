@@ -109,12 +109,12 @@ function pinchCircle(hand) { // adapted from https://editor.p5js.org/ml5/sketche
 function heartHandPuppet(hand) {
   //pinky finger and thumb tip?
 
-  let finger = hand.middle_finger_tip; // this finger now contains the x and y infomation! you can access it by using finger.x 
-  let thumb = hand.thumb_tip;
+  let finger = hand.pinky_finger_tip; // this finger now contains the x and y infomation! you can access it by using finger.x 
+  let thumb = hand.index_finger_tip;
 
   // Draw circles at finger positions
   let centerX = (finger.x + thumb.x) / 2;
-  let centerY = (finger.y + thumb.y) / 2;
+  let centerY = (finger.y - 50 + thumb.y - 50) / 2;
   // Calculate the pinch "distance" between finger and thumb
   let pinch = dist(finger.x, finger.y, thumb.x, thumb.y);
 
