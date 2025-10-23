@@ -96,13 +96,13 @@ function starShape(x, y) {
 
   beginShape();
   vertex(x, y + 15);
-  vertex(x + 5, y + 5);
+  vertex(x + 3.5, y + 3.5);
   vertex(x + 15, y);
-  vertex(x + 5, y - 5);
+  vertex(x + 3.5, y - 3.5);
   vertex(x, y - 15);
-  vertex(x - 5, y - 5);
+  vertex(x - 3.5, y - 3.5);
   vertex(x - 15, y);
-  vertex(x - 5, y + 5);
+  vertex(x - 3.5, y + 3.5);
   
   endShape(CLOSE);
 }
