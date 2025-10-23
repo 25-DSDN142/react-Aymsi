@@ -114,7 +114,7 @@ function heartHandPuppet(hand) {
 
   // Draw circles at finger positions
   let centerX = (finger.x + thumb.x) / 2;
-  let centerY = (finger.y - 50 + thumb.y - 50) / 2;
+  let centerY = (finger.y + 100 + thumb.y + 100) / 2;
   // Calculate the pinch "distance" between finger and thumb
   let pinch = dist(finger.x, finger.y, thumb.x, thumb.y);
 
