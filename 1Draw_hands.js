@@ -1,7 +1,10 @@
 // ----=  HANDS  =----
 /* load images here */
+
+let heartImage;
 function prepareInteraction() {
   //bgImage = loadImage('/images/background.png');
+  heartImage = loadImage('/images/heart.png');
 }
 
 function drawInteraction(faces, hands) {
@@ -13,7 +16,6 @@ function drawInteraction(faces, hands) {
     if (showKeypoints) {
       drawConnections(hand)
     }
-
     // This is how to load in the x and y of a point on the hand.
 
     //wrist (for centring ellipse/heart image)
@@ -44,17 +46,28 @@ function drawInteraction(faces, hands) {
     Start drawing on the hands here
     */
 
-    fill(255, 173, 211, 150);
-    stroke(255);
-       //variables for middle of hand ellipse
+    //variables for middle of hand heartImage
     let middleOfHandX = (middleFingerTipX + wristX) / 2; //finding middle between wrist and middle finger tip
 
     let middleOfHandY = (middleFingerTipY + wristY) / 2;
 
-    let sizeOfEllipse = dist(middleFingerTipX, middleFingerTipY, wristX, wristY) / 2;
+    let sizeOfImage = dist(middleFingerTipX, middleFingerTipY, wristX, wristY);
 
-    ellipse(middleOfHandX, middleOfHandY, sizeOfEllipse, sizeOfEllipse);
+    imageMode(CENTER);
+    image(heartImage, middleOfHandX, middleOfHandY, sizeOfImage, sizeOfImage);
 
+    fill(255, 173, 211, 150);
+    stroke(255);
+    //    //variables for middle of hand ellipse
+    // let middleOfHandX = (middleFingerTipX + wristX) / 2; //finding middle between wrist and middle finger tip
+
+    // let middleOfHandY = (middleFingerTipY + wristY) / 2;
+
+    // let sizeOfEllipse = dist(middleFingerTipX, middleFingerTipY, wristX, wristY) / 2;
+
+    // ellipse(middleOfHandX, middleOfHandY, sizeOfEllipse, sizeOfEllipse);
+
+    imageMode(CORNER);
     //thumb starShape
     starShape(thumbTipX, thumbTipY);
     // starShape(thumbTipX + 30, thumbTipY + 20);
