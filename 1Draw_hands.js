@@ -126,7 +126,7 @@ function starShape(x, y) {
 function var1StarShape(x, y) {
   fill(241, 153, 193);
   stroke(250, 211, 228);
-  strokeWeight(2);
+  strokeWeight(5);
 
   beginShape();
   vertex(x, y + 15);
@@ -142,19 +142,19 @@ function var1StarShape(x, y) {
 }
 
 function var2StarShape(x, y) {
-  fill(176, 221, 255);
-  stroke(250, 211, 228);
-  strokeWeight(2);
+  fill(128, 232, 255);
+  stroke(186, 242, 255);
+  strokeWeight(5);
 
   beginShape();
-  vertex(x, y + 15);
-  vertex(x + 3.5, y + 3.5);
-  vertex(x + 15, y);
-  vertex(x + 3.5, y - 3.5);
-  vertex(x, y - 15);
-  vertex(x - 3.5, y - 3.5);
-  vertex(x - 15, y);
-  vertex(x - 3.5, y + 3.5);
+  vertex(x, y + 20);
+  vertex(x + 5, y + 5);
+  vertex(x + 20, y);
+  vertex(x + 5, y - 5);
+  vertex(x, y - 20);
+  vertex(x - 5, y - 5);
+  vertex(x - 20, y);
+  vertex(x - 5, y + 5);
   
   endShape(CLOSE);
 }
