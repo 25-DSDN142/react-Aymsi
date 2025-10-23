@@ -114,7 +114,7 @@ function heartHandPuppet(hand) {
 
   // Draw circles at finger positions
   let centerX = (finger.x + thumb.x) / 2;
-  let centerY = (finger.y + 100 + thumb.y + 100) / 2;
+  let centerY = (finger.y + 75 + thumb.y + 75) / 2;
   // Calculate the pinch "distance" between finger and thumb
   let pinch = dist(finger.x, finger.y, thumb.x, thumb.y);
 
@@ -126,29 +126,29 @@ function heartHandPuppet(hand) {
 
 }
 
-function chameleonHandPuppet(hand) {
-  // Find the index finger tip and thumb tip
-  // let finger = hand.index_finger_tip;
+// function chameleonHandPuppet(hand) {
+//   // Find the index finger tip and thumb tip
+//   // let finger = hand.index_finger_tip;
 
-  let finger = hand.middle_finger_tip; // this finger now contains the x and y infomation! you can access it by using finger.x 
-  let thumb = hand.thumb_tip;
+//   let finger = hand.middle_finger_tip; // this finger now contains the x and y infomation! you can access it by using finger.x 
+//   let thumb = hand.thumb_tip;
 
-  // Draw circles at finger positions
-  let centerX = (finger.x + thumb.x) / 2;
-  let centerY = (finger.y + thumb.y) / 2;
-  // Calculate the pinch "distance" between finger and thumb
-  let pinch = dist(finger.x, finger.y, thumb.x, thumb.y);
+//   // Draw circles at finger positions
+//   let centerX = (finger.x + thumb.x) / 2;
+//   let centerY = (finger.y + thumb.y) / 2;
+//   // Calculate the pinch "distance" between finger and thumb
+//   let pinch = dist(finger.x, finger.y, thumb.x, thumb.y);
 
-  // This circle's size is controlled by a "pinch" gesture
-  fill(0, 255, 0, 200);
-  stroke(0);
-  strokeWeight(2);
-  circle(centerX, centerY, pinch);
+//   // This circle's size is controlled by a "pinch" gesture
+//   fill(0, 255, 0, 200);
+//   stroke(0);
+//   strokeWeight(2);
+//   circle(centerX, centerY, pinch);
 
-  let indexFingerTipX = hand.index_finger_tip.x;
-  let indexFingerTipY = hand.index_finger_tip.y;
-  fill(0)
-  circle(indexFingerTipX, indexFingerTipY, 20);
+//   let indexFingerTipX = hand.index_finger_tip.x;
+//   let indexFingerTipY = hand.index_finger_tip.y;
+//   fill(0)
+//   circle(indexFingerTipX, indexFingerTipY, 20);
 
 }
 
