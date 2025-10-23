@@ -56,6 +56,7 @@ function drawInteraction(faces, hands) {
     let elbowX = (indMcp.x + thumbMcp.x) /2;
     let elbowY = (indMcp.y + thumbMcp.y) /2;
 
+
   //=================================================
 
     if (hand.handedness === "Right") {

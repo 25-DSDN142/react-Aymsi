@@ -18,6 +18,8 @@ function drawInteraction(faces, hands) {
     }
     // This is how to load in the x and y of a point on the hand.
 
+    /////////////////////////////////////////////////////
+
     //wrist (for centring ellipse/heart image)
     let wristX = hand.wrist.x;
     let wristY = hand.wrist.y;
@@ -42,9 +44,18 @@ function drawInteraction(faces, hands) {
     let pinkyFingerTipX = hand.pinky_finger_tip.x;
     let pinkyFingerTipY = hand.pinky_finger_tip.y;
 
-    /*
-    Start drawing on the hands here
-    */
+    //////////////////////////////////////////
+   // Start drawing on the hands here
+  ///////////////////////////////////////////
+
+    let whatGesture = detecthandGesture(hand)
+
+    if (whatGesture == "Thumbs Up") {
+    var1StarShape(thumbTipX + 30, thumbTipY + 20);
+    var2StarShape(thumbTipX - 30, thumbTipY + 30);
+    }
+
+   /////////////////////////////////////////////////
 
     //variables for middle of hand heartImage
     let middleOfHandX = (middleFingerTipX + wristX) / 2; //finding middle between wrist and middle finger tip
@@ -70,8 +81,8 @@ function drawInteraction(faces, hands) {
     imageMode(CORNER);
     //thumb starShape
     starShape(thumbTipX, thumbTipY);
-    var1StarShape(thumbTipX + 30, thumbTipY + 20);
-    var2StarShape(thumbTipX - 30, thumbTipY + 30);
+    // var1StarShape(thumbTipX + 30, thumbTipY + 20);
+    // var2StarShape(thumbTipX - 30, thumbTipY + 30);
 
     //index finger starShape
     starShape(indexFingerTipX, indexFingerTipY);
