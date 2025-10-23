@@ -153,15 +153,15 @@ function drawInteraction(face, hands) {
 
     //variables for middle of eyes heartImage when mouth is opened - also scaling with hands open/close!
 
-    let sizeOfImage = dist(middleFingerTipX, middleFingerTipY, wristX, wristY) / 1.5;
+    let sizeOfEyeImage = dist(upperLip.x, upperLip.y, lowerLip.x, lowerLip.y);
     
     ////////////////////////////////////////////////
 //mouth open = heart image interaction!
   checkIfMouthOpen(face);
   if (isMouthOpen == true) {
     imageMode(CENTER);
-    image(heartImage, leftEyeCenterX, leftEyeCenterY, sizeOfImage, sizeOfImage);
-    image(heartImage, rightEyeCenterX, rightEyeCenterY, sizeOfImage, sizeOfImage);
+    image(heartImage, leftEyeCenterX, leftEyeCenterY, sizeOfEyeImage, sizeOfEyeImage);
+    image(heartImage, rightEyeCenterX, rightEyeCenterY, sizeOfEyeImage, sizeOfEyeImage);
   }
   imageMode(CORNER);
 }
