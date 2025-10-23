@@ -78,8 +78,8 @@ function drawInteraction(faces, hands) {
 }
 
 function starShape(x, y) {
-  fill(255);
-  stroke(0);
+  fill(255, 219, 99);
+  stroke(255, 238, 181);
   strokeWeight(2);
 
   beginShape();
