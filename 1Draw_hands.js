@@ -44,10 +44,17 @@ function drawInteraction(faces, hands) {
     let pinkyFingerTipX = hand.pinky_finger_tip.x;
     let pinkyFingerTipY = hand.pinky_finger_tip.y;
 
+  //variables for middle of hand heartImage
+    let middleOfHandX = (middleFingerTipX + wristX) / 2; //finding middle between wrist and middle finger tip
+
+    let middleOfHandY = (middleFingerTipY + wristY) / 2;
+
+    let sizeOfImage = dist(middleFingerTipX, middleFingerTipY, wristX, wristY) / 1.5;
+
     //////////////////////////////////////////
    // Start drawing on the hands here
   ///////////////////////////////////////////
-  
+
   //adding gesture recognition for additional stars
       let whatGesture = detectHandGesture(hand)
 
@@ -62,29 +69,25 @@ function drawInteraction(faces, hands) {
       var2StarShape(middleFingerTipX - 30, middleFingerTipY + 30);
     }
 
-   /////////////////////////////////////////////////
-
-    //variables for middle of hand heartImage
-    let middleOfHandX = (middleFingerTipX + wristX) / 2; //finding middle between wrist and middle finger tip
-
-    let middleOfHandY = (middleFingerTipY + wristY) / 2;
-
-    let sizeOfImage = dist(middleFingerTipX, middleFingerTipY, wristX, wristY) / 1.5;
-
+    //making heart shape appear only when the palm is open
+    if (whatGesture == "Open Palm") {
     imageMode(CENTER);
     image(heartImage, middleOfHandX, middleOfHandY, sizeOfImage, sizeOfImage);
+    // also adding some extra sparkles on some fingers for more majestic sparklyness
+    var2StarShape(ringFingerTipX - 40, ringFingerTipY - 30);
 
-    fill(255, 173, 211, 150);
-    stroke(255);
-    //    //variables for middle of hand ellipse
-    // let middleOfHandX = (middleFingerTipX + wristX) / 2; //finding middle between wrist and middle finger tip
+    var2StarShape(indexFingerTipX - 30, indexFingerTipY + 40);
 
-    // let middleOfHandY = (middleFingerTipY + wristY) / 2;
+    var2StarShape(pinkyFingerTipX - 30, pinkyFingerTipY + 30);
 
-    // let sizeOfEllipse = dist(middleFingerTipX, middleFingerTipY, wristX, wristY) / 2;
+    var1StarShape(indexFingerTipX + 30, indexFingerTipY - 30);
 
-    // ellipse(middleOfHandX, middleOfHandY, sizeOfEllipse, sizeOfEllipse);
+    var1StarShape(middleFingerTipX - 30, middleFingerTipY - 40);
 
+    var1StarShape(thumbTipX - 30, thumbTipY + 30);
+
+    }
+   /////////////////////////////////////////////////
     imageMode(CORNER);
     //thumb starShape
     starShape(thumbTipX, thumbTipY);
