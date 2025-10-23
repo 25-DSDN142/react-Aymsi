@@ -71,7 +71,7 @@ function drawInteraction(faces, hands) {
     //thumb starShape
     starShape(thumbTipX, thumbTipY);
     var1StarShape(thumbTipX + 30, thumbTipY + 20);
-    var1StarShape(thumbTipX - 30, thumbTipY + 30);
+    var2StarShape(thumbTipX - 30, thumbTipY + 30);
 
     //index finger starShape
     starShape(indexFingerTipX, indexFingerTipY);
@@ -124,8 +124,8 @@ function starShape(x, y) {
 }
 
 function var1StarShape(x, y) {
-  fill(255, 176, 225);
-  stroke(255, 240, 171);
+  fill(241, 153, 193);
+  stroke(250, 211, 228);
   strokeWeight(2);
 
   beginShape();
@@ -141,6 +141,23 @@ function var1StarShape(x, y) {
   endShape(CLOSE);
 }
 
+function var2StarShape(x, y) {
+  fill(176, 221, 255);
+  stroke(250, 211, 228);
+  strokeWeight(2);
+
+  beginShape();
+  vertex(x, y + 15);
+  vertex(x + 3.5, y + 3.5);
+  vertex(x + 15, y);
+  vertex(x + 3.5, y - 3.5);
+  vertex(x, y - 15);
+  vertex(x - 3.5, y - 3.5);
+  vertex(x - 15, y);
+  vertex(x - 3.5, y + 3.5);
+  
+  endShape(CLOSE);
+}
 function pinchCircle(hand) { // adapted from https://editor.p5js.org/ml5/sketches/DNbSiIYKB
   // Find the index finger tip and thumb tip
   let finger = hand.index_finger_tip;
