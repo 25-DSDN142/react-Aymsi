@@ -51,7 +51,7 @@ function drawInteraction(faces, hands) {
 
     let middleOfHandY = (middleFingerTipY + wristY) / 2;
 
-    let sizeOfImage = dist(middleFingerTipX, middleFingerTipY, wristX, wristY);
+    let sizeOfImage = dist(middleFingerTipX, middleFingerTipY, wristX, wristY) / 1.5;
 
     imageMode(CENTER);
     image(heartImage, middleOfHandX, middleOfHandY, sizeOfImage, sizeOfImage);
