@@ -1,8 +1,7 @@
 // ----=  HANDS  =----
 // USING THE GESTURE DETECTORS (check their values in the debug menu)
-// detectHandGesture(hand) returns "Pinch", "Peace", "Thumbs Up", "Pointing", "Open Palm", or "Fist"
+// detectHandGesture(hand);"Pinch", "Peace", "Thumbs Up", "Pointing", "Open Palm", or "Fist"
 
-/* load images here */
 function prepareInteraction() {
   //bgImage = loadImage('/images/background.png');
 }
@@ -56,6 +55,42 @@ function drawInteraction(faces, hands) {
     let elbowX = (indMcp.x + thumbMcp.x) /2;
     let elbowY = (indMcp.y + thumbMcp.y) /2;
 
+   /////////////////////////////////////////////////////
+
+    //wrist (for centring ellipse/heart image)
+    let wristX = hand.wrist.x;
+    let wristY = hand.wrist.y;
+
+    //thumb
+    let thumbTipX = hand.thumb_tip.x;
+    let thumbTipY = hand.thumb_tip.y;
+
+    //index finger
+    let indexFingerTipX = hand.index_finger_tip.x;
+    let indexFingerTipY = hand.index_finger_tip.y;
+
+    //middle finger
+    let middleFingerTipX = hand.middle_finger_tip.x;
+    let middleFingerTipY = hand.middle_finger_tip.y;
+
+    //ring finger
+    let ringFingerTipX = hand.ring_finger_tip.x;
+    let ringFingerTipY = hand.ring_finger_tip.y;
+
+    //pinky finger
+    let pinkyFingerTipX = hand.pinky_finger_tip.x;
+    let pinkyFingerTipY = hand.pinky_finger_tip.y;
+
+    //////////////////////////////////////////
+
+
+    let whatGesture = detectHandGesture(hand)
+
+    if (whatGesture == "Thumbs Up") {
+    
+    var1StarShape(thumbTipX + 30, thumbTipY + 20);
+    var2StarShape(thumbTipX - 30, thumbTipY + 30);
+    }
 
   //=================================================
 

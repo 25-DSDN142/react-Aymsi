@@ -48,13 +48,6 @@ function drawInteraction(faces, hands) {
    // Start drawing on the hands here
   ///////////////////////////////////////////
 
-    let whatGesture = detecthandGesture(hand)
-
-    if (whatGesture == "Thumbs Up") {
-    var1StarShape(thumbTipX + 30, thumbTipY + 20);
-    var2StarShape(thumbTipX - 30, thumbTipY + 30);
-    }
-
    /////////////////////////////////////////////////
 
     //variables for middle of hand heartImage
