@@ -83,14 +83,14 @@ function starShape(x, y) {
   strokeWeight(2);
 
   beginShape();
-  vertex(x, y + 10);
-  vertex(x + 5, y + 5);
-  vertex(x + 10, y);
-  vertex(x + 5, y - 5);
-  vertex(x, y - 10);
-  vertex(x - 5, y - 5);
-  vertex(x - 10, y);
-  vertex(x - 5, y + 5);
+  vertex(x, y + 20);
+  vertex(x + 10, y + 10);
+  vertex(x + 20, y);
+  vertex(x + 10, y - 10);
+  vertex(x, y - 20);
+  vertex(x - 10, y - 10);
+  vertex(x - 20, y);
+  vertex(x - 10, y + 10);
   
   endShape(CLOSE);
 }
