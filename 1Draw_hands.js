@@ -63,6 +63,18 @@ function drawInteraction(faces, hands) {
     //thumb starShape
     starShape(thumbTipX, thumbTipY);
 
+    //index finger starShape
+    starShape(indexFingerTipX, indexFingerTipY);
+
+    //middle finger starShape
+    starShape(middleFingerTipX, middleFingerTipY);
+
+    //ring finger starShape
+    starShape(ringFingerTipX, ringFingerTipY);
+
+    //pinky finger starShape
+    starShape(pinkyFingerTipX, pinkyFingerTipY);
+
     //drawPoints(hand);
 
     //fingerPuppet(indexFingerTipX, indexFingerTipY);
@@ -83,14 +95,14 @@ function starShape(x, y) {
   strokeWeight(2);
 
   beginShape();
-  vertex(x, y + 20);
-  vertex(x + 5, y + 5);
-  vertex(x + 20, y);
-  vertex(x + 5, y - 5);
-  vertex(x, y - 20);
-  vertex(x - 5, y - 5);
-  vertex(x - 20, y);
-  vertex(x - 5, y + 5);
+  vertex(x, y + 15);
+  vertex(x + 2.5, y + 2.5);
+  vertex(x + 15, y);
+  vertex(x + 2.5, y - 2.5);
+  vertex(x, y - 15);
+  vertex(x - 2.5, y - 2.5);
+  vertex(x - 15, y);
+  vertex(x - 2.5, y + 2.5);
   
   endShape(CLOSE);
 }
