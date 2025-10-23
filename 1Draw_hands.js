@@ -16,6 +16,10 @@ function drawInteraction(faces, hands) {
 
     // This is how to load in the x and y of a point on the hand.
 
+    //wrist (for centring ellipse/heart image)
+    let wristX = hand.wrist.x;
+    let wristY = hand.wrist.y;
+
     //thumb
     let thumbTipX = hand.thumb_tip.x;
     let thumbTipY = hand.thumb_tip.y;
@@ -36,10 +40,14 @@ function drawInteraction(faces, hands) {
     let pinkyFingerTipX = hand.pinky_finger_tip.x;
     let pinkyFingerTipY = hand.pinky_finger_tip.y;
 
+    let sizeOfEllipse = dist(middleFingerTipX, middleFingerTipY, wristX, wristY);
+
     /*
     Start drawing on the hands here
     */
 
+    ellipse(sizeOfEllipse, sizeOfEllipse, sizeOfEllipse, sizeOfEllipse);
+    
     //thumb starShape
     starShape(thumbTipX, thumbTipY);
 
@@ -150,7 +158,7 @@ function heartHandPuppet(hand) {
 //   fill(0)
 //   circle(indexFingerTipX, indexFingerTipY, 20);
 
-}
+//}
 
 function drawConnections(hand) {
   // Draw the skeletal connections
