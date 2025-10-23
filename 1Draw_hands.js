@@ -70,24 +70,31 @@ function drawInteraction(faces, hands) {
     imageMode(CORNER);
     //thumb starShape
     starShape(thumbTipX, thumbTipY);
+    scale(0.5);
     starShape(thumbTipX + 30, thumbTipY + 20);
     starShape(thumbTipX - 30, thumbTipY + 30);
 
+    scale(1);
     //index finger starShape
     starShape(indexFingerTipX, indexFingerTipY);
-    starShape(indexFingerTipX+ 30, indexFingerTipY + 20);
-    starShape(indexFingerTipX - 30, indexFingerTipY + 30);
+    // starShape(indexFingerTipX+ 30, indexFingerTipY + 20);
+    // starShape(indexFingerTipX - 30, indexFingerTipY + 30);
 
     //middle finger starShape
     starShape(middleFingerTipX, middleFingerTipY);
+    // starShape(middleFingerTipX+ 30, middleFingerTipY + 20);
+    // starShape(middleFingerTipX - 30, middleFingerTipY + 30);
 
     //ring finger starShape
     starShape(ringFingerTipX, ringFingerTipY);
+    // starShape(ringFingerTipX+ 30, ringFingerTipY + 20);
+    // starShape(ringFingerTipX - 30, ringFingerTipY + 30);
 
     //pinky finger starShape
     starShape(pinkyFingerTipX, pinkyFingerTipY);
+    // starShape(pinkyFingerTipX+ 30, pinkyFingerTipY + 20);
+    // starShape(pinkyFingerTipX - 30, pinkyFingerTipY + 30);
 
-    //would be heart - but testing first with ellipse: first method chameleon hand puppet
     //heartHandPuppet(hand);
 
      //drawPoints(hand);
