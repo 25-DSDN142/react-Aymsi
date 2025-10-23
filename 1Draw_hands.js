@@ -40,26 +40,6 @@ function drawInteraction(faces, hands) {
     Start drawing on the hands here
     */
 
-    //thumb
-    // fill(255);
-    // ellipse(thumbTipX, thumbTipY, 30, 30);
-
-    //index finger
-    // fill(255);
-    // ellipse(indexFingerTipX, indexFingerTipY, 30, 30);
-
-    //middle finger
-    // fill(255);
-    // ellipse(middleFingerTipX, middleFingerTipY, 30, 30);
-
-    //ring finger
-    // fill(255);
-    // ellipse(ringFingerTipX, ringFingerTipY, 30, 30);
-
-    //pinky finger
-    // fill(255);
-    // ellipse(pinkyFingerTipX, pinkyFingerTipY, 30, 30);
-
     //thumb starShape
     starShape(thumbTipX, thumbTipY);
 
@@ -76,8 +56,6 @@ function drawInteraction(faces, hands) {
     starShape(pinkyFingerTipX, pinkyFingerTipY);
 
     //drawPoints(hand);
-
-    //fingerPuppet(indexFingerTipX, indexFingerTipY);
 
     //chameleonHandPuppet(hand)
 
@@ -106,20 +84,6 @@ function starShape(x, y) {
   
   endShape(CLOSE);
 }
-
-
-
-
-function fingerPuppet(x, y) {
-  fill(255, 38, 219) // pink
-  ellipse(x, y, 100, 20)
-  ellipse(x, y, 20, 100)
-
-  fill(255, 252, 48) // yellow
-  ellipse(x, y, 20) // draw center 
-
-}
-
 
 function pinchCircle(hand) { // adapted from https://editor.p5js.org/ml5/sketches/DNbSiIYKB
   // Find the index finger tip and thumb tip
