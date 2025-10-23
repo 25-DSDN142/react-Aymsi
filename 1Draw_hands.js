@@ -147,8 +147,8 @@ function drawInteraction(face, hands) {
   checkIfMouthOpen(face);
   if (isMouthOpen == true) {
     imageMode(CENTER);
-    image(heartImage, leftEyeCenterX, leftEyeCenterY, leftEyeWidth * 2, leftEyeHeight * 2);
-    image(heartImage, rightEyeCenterX, rightEyeCenterY, rightEyeWidth * 2, rightEyeHeight * 2);
+    image(heartImage, leftEyeCenterX, leftEyeCenterY, sizeOfImage, sizeOfImage);
+    image(heartImage, rightEyeCenterX, rightEyeCenterY, sizeOfImage, sizeOfImage);
   }
   imageMode(CORNER);
 }
