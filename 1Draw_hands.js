@@ -51,7 +51,7 @@ function drawInteraction(faces, hands) {
 
     let middleOfHandY = (middleFingerTipY + wristY) / 2;
 
-    let sizeOfEllipse = dist(middleFingerTipX, middleFingerTipY, wristX, wristY);
+    let sizeOfEllipse = dist(middleFingerTipX, middleFingerTipY, wristX, wristY) / 2;
 
     ellipse(middleOfHandX, middleOfHandY, sizeOfEllipse, sizeOfEllipse);
 
