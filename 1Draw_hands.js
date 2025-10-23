@@ -63,10 +63,10 @@ function drawInteraction(faces, hands) {
       var2StarShape(thumbTipX - 30, thumbTipY + 30);
     }
     if (whatGesture == "Peace") {
-      var1StarShape(indexFingerTipX + 30, indexFingerTipY + 20);
-      var2StarShape(indexFingerTipX - 30, indexFingerTipY + 30);
-      var1StarShape(middleFingerTipX + 30, middleFingerTipY + 20);
-      var2StarShape(middleFingerTipX - 30, middleFingerTipY + 30);
+      var1StarShape(indexFingerTipX + 40, indexFingerTipY + 20);
+      var2StarShape(indexFingerTipX - 30, indexFingerTipY + 40);
+      var1StarShape(middleFingerTipX - 30, middleFingerTipY + 40);
+      var2StarShape(middleFingerTipX + 40, middleFingerTipY - 20);
     }
 
     //making heart shape appear only when the palm is open
